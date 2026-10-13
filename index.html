@@ -3,301 +3,686 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARELL | Lotes Campestres</title>
+    <title>ARELL | Lotes Campestres en Tixkokob</title>
 
-<meta name="description" content="Lotes Campestres en Tixkokob, Yucatán. Invierte en una excelente oportunidad patrimonial.">
+    <meta name="description"
+        content="Invierte en Lotes Campestres ARELL. Desarrollo ubicado en Tixkokob, Yucatán. Excelente plusvalía y financiamiento.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color" content="#2E4D37">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
 
 <body>
 
+    <div class="menu-overlay" id="menu-overlay"></div>
+
 <header>
 
-<nav>
+    <nav class="navbar">
 
-<nav class="navbar">
+        <a href="#inicio" class="logo">
 
-    <div class="logo">
-        <img src="img/logo/arell-logo.jpg" alt="ARELL">
-    </div>
+            <img src="img/logo/arell-logo.jpg"
+                 alt="ARELL Lotes Campestres">
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-    </button>
+        </a>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#plano">Plano</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#ubicacion">Ubicación</a></li>
-    </ul>
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menú">
 
-</nav>
+            <i class="fas fa-bars"></i>
 
-<section class="hero" id="inicio">
+        </button>
 
-<div class="overlay">
+        <ul class="nav-links" id="nav-links">
 
-<h1>
+            <li><a href="#inicio">Inicio</a></li>
 
-Tu patrimonio comienza aquí
+            <li><a href="#beneficios">Beneficios</a></li>
 
-</h1>
+            <li><a href="#plano">Plano</a></li>
 
-<p>
+            <li><a href="#galeria">Galería</a></li>
 
-Lotes Campestres en Tixkokob, Yucatán.
+            <li><a href="#ubicacion">Ubicación</a></li>
 
-<br>
+            <li>
+                <a class="btn-menu"
+                   href="https://wa.me/529991234567"
+                   target="_blank">
 
-Invierte hoy en una zona con excelente plusvalía.
+                    WhatsApp
 
-</p>
+                </a>
+            </li>
 
-<div class="hero-buttons">
+        </ul>
 
-<a href="#plano" class="btn">
-
-Ver Plano
-
-</a>
-
-<a href="https://goo.gl/maps/eSYj9o3gpbmD7PMF9?g_st=aw"
-
-target="_blank"
-
-class="btn btn-light">
-
-Cómo llegar
-
-</a>
-
-</div>
-
-</div>
-
-</section>
+    </nav>
 
 </header>
 
-<section class="stats">
+<!-- HERO -->
 
-<div>
+<section class="hero" id="inicio">
 
-<h2>272</h2>
+    <div class="overlay">
 
-<p>Lotes</p>
+        <span class="badge">
 
-</div>
+            🌿 Desarrollo Campestre Premium
 
-<div>
+        </span>
 
-<h2>169.67 m²</h2>
+        <h1>
 
-<p>Desde</p>
+            Tu patrimonio comienza aquí
 
-</div>
+        </h1>
 
-<div>
+        <p>
 
-<h2>36</h2>
+            Invierte hoy en uno de los desarrollos con mayor potencial
+            de crecimiento en Tixkokob, Yucatán.
 
-<p>Meses</p>
+        </p>
 
-</div>
+        <div class="hero-buttons">
 
-<div>
+            <a href="#plano"
+               class="btn">
 
-<h2>20 min</h2>
+                Ver Plano
 
-<p>De Mérida</p>
+            </a>
 
-</div>
+            <a href="#ubicacion"
+               class="btn btn-light">
+
+                Cómo llegar
+
+            </a>
+
+        </div>
+
+        <div class="hero-scroll">
+
+            <a href="#beneficios">
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     BENEFICIOS
+====================================================== -->
+
+<section id="beneficios" class="beneficios">
+
+    <div class="container">
+
+        <span class="section-tag">
+            ¿Por qué invertir en ARELL?
+        </span>
+
+        <h2>
+            Un desarrollo pensado para crecer contigo
+        </h2>
+
+        <p class="section-description">
+
+            ARELL Lotes Campestres ofrece una excelente oportunidad de
+            inversión en una zona con gran potencial de plusvalía,
+            rodeada de naturaleza y con fácil acceso desde Mérida.
+
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <i class="fa-solid fa-tree"></i>
+
+                <h3>Entorno Natural</h3>
+
+                <p>
+
+                    Vive rodeado de tranquilidad, vegetación y espacios
+                    ideales para construir tu patrimonio.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Alta Plusvalía</h3>
+
+                <p>
+
+                    La zona de Tixkokob continúa creciendo y representa
+                    una excelente oportunidad para invertir hoy.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Excelente Ubicación</h3>
+
+                <p>
+
+                    Muy cerca de Mérida y con acceso por carreteras
+                    principales del estado.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>Facilidades de Pago</h3>
+
+                <p>
+
+                    Planes accesibles que te permiten invertir de forma
+                    cómoda y segura.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Patrimonio Seguro</h3>
+
+                <p>
+
+                    Una inversión pensada para proteger el patrimonio de
+                    tu familia a largo plazo.
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <i class="fa-solid fa-seedling"></i>
+
+                <h3>Ideal para Descanso</h3>
+
+                <p>
+
+                    Disfruta de un espacio para desconectarte del ritmo
+                    de la ciudad y convivir con la naturaleza.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="beneficios" id="beneficios">
+<!-- =====================================================
+     PLANO GENERAL
+====================================================== -->
 
-<h2>
+<section id="plano" class="plano">
 
-¿Por qué invertir en ARELL?
+    <div class="container">
 
-</h2>
+        <span class="section-tag">
+            Plano General
+        </span>
 
-<div class="cards">
+        <h2>
+            Conoce la distribución del desarrollo
+        </h2>
 
-<div class="card">
+        <p class="section-description">
 
-<i class="fa-solid fa-seedling"></i>
+            Explora la ubicación de los lotes disponibles y visualiza
+            cómo está conformado ARELL Lotes Campestres.
 
-<h3>Naturaleza</h3>
+        </p>
 
-<p>
+        <div class="plano-grid">
 
-Espacios ideales para descansar y vivir.
+            <!-- Imagen -->
 
-</p>
+            <div class="plano-imagen">
 
-</div>
+                <img
+                    src="img/planos/plano-general.jpg"
+                    alt="Plano General ARELL"
+                    loading="lazy">
 
-<div class="card">
+            </div>
 
-<i class="fa-solid fa-chart-line"></i>
+            <!-- Información -->
 
-<h3>Alta Plusvalía</h3>
+            <div class="plano-info">
 
-<p>
+                <div class="info-card">
 
-Una inversión pensada para crecer con el tiempo.
+                    <i class="fa-solid fa-map-location-dot"></i>
 
-</p>
+                    <h3>
+                        Desarrollo organizado
+                    </h3>
 
-</div>
+                    <p>
 
-<div class="card">
+                        Los lotes han sido distribuidos para ofrecer
+                        comodidad, accesibilidad y un crecimiento
+                        ordenado del desarrollo.
 
-<i class="fa-solid fa-house"></i>
+                    </p>
 
-<h3>Propiedad Privada</h3>
+                </div>
 
-<p>
+                <div class="info-card">
 
-Seguridad jurídica para tu patrimonio.
+                    <i class="fa-solid fa-circle-check"></i>
 
-</p>
+                    <h3>
+                        Disponibilidad
+                    </h3>
 
-</div>
+                    <p>
 
-<div class="card">
+                        Consulta con uno de nuestros asesores los lotes
+                        actualmente disponibles y las promociones
+                        vigentes.
 
-<i class="fa-solid fa-money-bill-wave"></i>
+                    </p>
 
-<h3>Financiamiento</h3>
+                </div>
 
-<p>
+                <div class="plano-botones">
 
-Hasta 36 meses directamente.
+                    <a
+                        href="img/planos/plano-general.jpg"
+                        target="_blank"
+                        class="btn">
 
-</p>
+                        <i class="fa-solid fa-image"></i>
 
-</div>
+                        Ver Plano
 
-</div>
+                    </a>
+
+                    <a
+                        href="img/planos/plano-general.jpg"
+                        download
+                        class="btn btn-light">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Descargar
+
+                    </a>
+
+                </div>
+
+                <a
+                    href="https://wa.me/529991234567?text=Hola,%20quiero%20información%20de%20los%20lotes%20ARELL."
+                    target="_blank"
+                    class="btn-whatsapp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Solicitar información
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="plano">
+<!-- =====================================================
+     GALERÍA
+====================================================== -->
 
-<h2>
+<section id="galeria" class="galeria">
 
-Plano General
+    <div class="container">
 
-</h2>
+        <span class="section-tag">
+            Galería
+        </span>
 
-<img
+        <h2>
+            Conoce ARELL Lotes Campestres
+        </h2>
 
-src="img/planos/plano-general.jpg"
+        <p class="section-description">
 
-class="plano"
+            Descubre algunos de los espacios que forman parte del
+            desarrollo y visualiza el potencial de tu próxima inversión.
 
-alt="Plano General">
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria1.jpg"
+                     alt="Vista del desarrollo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria2.jpg"
+                     alt="Lotes campestres"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria3.jpg"
+                     alt="Naturaleza"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria4.jpg"
+                     alt="Acceso principal"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria5.jpg"
+                     alt="Vista aérea"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/galeria/galeria6.jpg"
+                     alt="Área del desarrollo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
+        </div>
+
+        <div class="gallery-action">
+
+            <a href="https://wa.me/529991234567?text=Hola,%20quiero%20conocer%20más%20sobre%20ARELL."
+               target="_blank"
+               class="btn">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Solicitar información
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="galeria">
+<!-- =====================================================
+     UBICACIÓN
+====================================================== -->
 
-<h2>
+<section id="ubicacion" class="ubicacion">
 
-Galería
+    <div class="container">
 
-</h2>
+        <span class="section-tag">
+            Ubicación
+        </span>
 
-<div class="galeria">
+        <h2>
+            Estamos en Tixkokob, Yucatán
+        </h2>
 
-<img src="img/galeria/1.jpg">
+        <p class="section-description">
 
-<img src="img/galeria/2.jpg">
+            ARELL Lotes Campestres se encuentra en una ubicación
+            estratégica con fácil acceso desde la ciudad de Mérida.
 
-<img src="img/galeria/3.jpg">
+        </p>
 
-<img src="img/galeria/4.jpg">
+        <div class="ubicacion-grid">
 
-</div>
+            <div class="mapa">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb="
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+            <div class="ubicacion-info">
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>Dirección</h3>
+
+                    <p>
+                        Tixkokob, Yucatán, México
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3>Horario de atención</h3>
+
+                    <p>
+                        Lunes a Domingo<br>
+                        9:00 AM - 6:00 PM
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <h3>Asesoría personalizada</h3>
+
+                    <p>
+                        Agenda una visita y conoce el desarrollo.
+                    </p>
+
+                </div>
+
+                <div class="ubicacion-botones">
+
+                    <a href="https://maps.google.com"
+                       target="_blank"
+                       class="btn">
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        Abrir Google Maps
+
+                    </a>
+
+                    <a href="https://wa.me/529991234567"
+                       target="_blank"
+                       class="btn btn-light">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Contactar Asesor
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="ubicacion">
 
-<h2>
+<!-- =====================================================
+     BOTÓN WHATSAPP
+====================================================== -->
 
-Ubicación
+<a href="https://wa.me/529991234567"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
 
-</h2>
-
-<iframe
-
-src="https://www.google.com/maps?q=20.960178,-89.316832&z=15&output=embed"
-
-loading="lazy"
-
-allowfullscreen>
-
-</iframe>
-
-<br><br>
-
-<a
-
-class="btn"
-
-target="_blank"
-
-href="https://goo.gl/maps/eSYj9o3gpbmD7PMF9?g_st=aw">
-
-Abrir Google Maps
+    <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-</section>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer>
 
-<img src="img/logo/arell-logo.jpg">
+    <div class="container footer-grid">
 
-<p>
+        <div>
 
-ARELL Lotes Campestres
+            <img
+                src="img/logo/arell-logo.jpg"
+                alt="ARELL"
+                class="footer-logo">
 
-</p>
+            <p>
 
-<p>
+                Desarrollo de lotes campestres pensado para quienes
+                buscan invertir con visión de futuro.
 
-Tixkokob, Yucatán
+            </p>
 
-</p>
+        </div>
 
-<p>
+        <div>
 
-© 2026 Todos los derechos reservados.
+            <h4>Menú</h4>
 
-</p>
+            <ul>
+
+                <li><a href="#inicio">Inicio</a></li>
+
+                <li><a href="#beneficios">Beneficios</a></li>
+
+                <li><a href="#plano">Plano</a></li>
+
+                <li><a href="#galeria">Galería</a></li>
+
+                <li><a href="#ubicacion">Ubicación</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Contacto</h4>
+
+            <p>
+
+                📍 Tixkokob, Yucatán
+
+            </p>
+
+            <p>
+
+                📞 +52 999 123 4567
+
+            </p>
+
+            <p>
+
+                ✉ contacto@arell.com.mx
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        © 2026 ARELL Lotes Campestres.
+        Todos los derechos reservados.
+
+    </div>
 
 </footer>
 
-<script src="js/app.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="js/menu.js"></script>
+<script src="js/scroll.js"></script>
+
 
 </body>
 

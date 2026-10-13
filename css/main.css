@@ -1,35 +1,46 @@
-/* ===========================================================
-   ARELL LOTES CAMPESTRES
-   styles.css
-   Parte 1 de 4
-   =========================================================== */
+/*=========================================================
+  ARELL LOTES CAMPESTRES
+  MAIN.CSS V2.0
+=========================================================*/
+
+
+/*=========================================================
+  VARIABLES
+=========================================================*/
 
 :root{
 
-    --verde:#2E4D37;
-    --verde-claro:#8FAE5D;
-    --verde-hover:#4C6E45;
+    --verde:#23452B;
+    --verde-secundario:#3E6B48;
+    --verde-claro:#6FA66B;
 
-    --crema:#F8F7F3;
-
-    --gris:#666666;
-
-    --gris-claro:#EFEFEF;
+    --dorado:#C7A64A;
 
     --blanco:#FFFFFF;
 
-    --sombra:0 15px 35px rgba(0,0,0,.12);
+    --gris:#F6F6F6;
+    --gris-claro:#EEEEEE;
+    --gris-texto:#666666;
 
-    --radio:14px;
+    --negro:#222222;
+
+    --sombra:0 15px 40px rgba(0,0,0,.08);
+
+    --radio:18px;
+
+    --transicion:.35s ease;
 
 }
+
+
+/*=========================================================
+  RESET
+=========================================================*/
 
 *{
 
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
 
 }
@@ -44,9 +55,9 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:var(--crema);
+    background:#fff;
 
-    color:#333;
+    color:var(--negro);
 
     overflow-x:hidden;
 
@@ -54,56 +65,379 @@ body{
 
 }
 
-img{
 
-    max-width:100%;
+/*=========================================================
+  IMÁGENES
+=========================================================*/
+
+img{
 
     display:block;
 
+    width:100%;
+
+    height:auto;
+
 }
+
+
+/*=========================================================
+  LINKS
+=========================================================*/
 
 a{
 
     text-decoration:none;
 
+    color:inherit;
+
 }
 
-/*============================
-      NAVBAR
-=============================*/
 
+/*=========================================================
+  LISTAS
+=========================================================*/
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/*=========================================================
+  CONTAINER
+=========================================================*/
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+
+/*=========================================================
+  SECCIONES
+=========================================================*/
+
+section{
+
+    padding:90px 0;
+
+}
+
+
+/*=========================================================
+  TÍTULOS
+=========================================================*/
+
+h1{
+
+    font-size:clamp(2.6rem,5vw,4.8rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:1.25rem;
+
+    color:var(--verde);
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--gris-texto);
+
+    font-size:1rem;
+
+}
+
+
+/*=========================================================
+  ETIQUETA DE SECCIÓN
+=========================================================*/
+
+.section-tag{
+
+    display:inline-block;
+
+    background:#EDF5EE;
+
+    color:var(--verde);
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    font-size:.90rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+/*=========================================================
+  DESCRIPCIÓN
+=========================================================*/
+
+.section-description{
+
+    max-width:760px;
+
+    margin:20px auto 60px;
+
+    text-align:center;
+
+}
+
+
+/*=========================================================
+  UTILIDADES
+=========================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+/*=========================================================
+  NAVBAR
+=========================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+.navbar{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 40px;
+
+    transition:all .35s ease;
+
+}
+
+header.scrolled{
+
+    background:#ffffff;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+header.scrolled .navbar{
+
+    padding:12px 40px;
+
+}
+
+
+/*=========================================================
+LOGO
+=========================================================*/
 
 .logo img{
 
-    height:65px;
+    width:170px;
+
+    transition:.35s;
+
+}
+
+header.scrolled .logo img{
+
+    width:150px;
 
 }
 
 
+/*=========================================================
+MENU
+=========================================================*/
 
-/*============================
-      HERO
-=============================*/
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+header.scrolled .nav-links a{
+
+    color:var(--verde);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--dorado);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*=========================================================
+BOTON MENU
+=========================================================*/
+
+.btn-menu{
+
+    background:var(--dorado);
+
+    color:#fff !important;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+}
+
+.btn-menu:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/*=========================================================
+HAMBURGUESA
+=========================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:30px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    background:none;
+
+    border:none;
+
+}
+
+header.scrolled .menu-toggle{
+
+    color:var(--verde);
+
+}
+
+
+/*=========================================================
+HERO
+=========================================================*/
 
 .hero{
 
-    height:100vh;
+    min-height:100vh;
 
-    background:
+    background:url("../img/hero/hero.jpg");
 
-    linear-gradient(
-
-    rgba(0,0,0,.45),
-
-    rgba(0,0,0,.45)
-
-    ),
-
-    url("../img/hero/hero.jpg");
+    background-position:center;
 
     background-size:cover;
 
-    background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
 
@@ -111,45 +445,88 @@ a{
 
     align-items:center;
 
-    text-align:center;
-
-    color:white;
-
-    padding:0 20px;
+    position:relative;
 
 }
 
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.48);
+
+}
+
+
+/*=========================================================
+OVERLAY
+=========================================================*/
+
 .overlay{
 
-    max-width:900px;
+    position:relative;
+
+    z-index:2;
+
+    width:min(900px,92%);
+
+    text-align:center;
+
+    color:#fff;
 
 }
 
 .overlay h1{
 
-    font-size:4.5rem;
+    color:#fff;
 
-    font-weight:800;
-
-    margin-bottom:20px;
-
-    letter-spacing:1px;
+    margin-bottom:25px;
 
 }
 
 .overlay p{
 
-    font-size:1.3rem;
+    color:#fff;
 
-    margin-bottom:35px;
+    font-size:1.15rem;
 
-    font-weight:300;
+    max-width:700px;
+
+    margin:0 auto 35px;
 
 }
 
-/*============================
-      BOTONES
-=============================*/
+
+/*=========================================================
+BADGE
+=========================================================*/
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(8px);
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================================
+BOTONES HERO
+=========================================================*/
 
 .hero-buttons{
 
@@ -161,17 +538,17 @@ a{
 
     flex-wrap:wrap;
 
+    margin-top:35px;
+
 }
 
 .btn{
 
-    display:inline-block;
-
     background:var(--verde);
 
-    color:white;
+    color:#fff;
 
-    padding:16px 42px;
+    padding:16px 34px;
 
     border-radius:50px;
 
@@ -179,21 +556,19 @@ a{
 
     transition:.35s;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
 }
 
 .btn:hover{
 
-    background:var(--verde-hover);
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
+    background:var(--verde-secundario);
 
 }
 
 .btn-light{
 
-    background:white;
+    background:#fff;
 
     color:var(--verde);
 
@@ -201,327 +576,252 @@ a{
 
 .btn-light:hover{
 
-    background:var(--verde-claro);
-
-    color:white;
-
-}
-
-/*============================
-      TITULOS
-=============================*/
-
-section{
-
-    padding:90px 10%;
-
-}
-
-section h2{
-
-    text-align:center;
-
-    font-size:2.5rem;
-
-    color:var(--verde);
-
-    margin-bottom:50px;
-
-    font-weight:700;
-
-}
-/*==================================================
-=            ESTADÍSTICAS                           =
-==================================================*/
-
-.stats{
-
-    background:var(--verde);
+    background:var(--dorado);
 
     color:#fff;
 
-    display:grid;
+}
 
-    grid-template-columns:repeat(4,1fr);
 
-    gap:30px;
+/*=========================================================
+FLECHA
+=========================================================*/
 
-    text-align:center;
+.hero-scroll{
 
-    padding:45px 10%;
+    margin-top:60px;
+
+    font-size:30px;
 
 }
 
-.stats div{
-
-    transition:.35s;
-
-}
-
-.stats div:hover{
-
-    transform:translateY(-6px);
-
-}
-
-.stats h2{
+.hero-scroll a{
 
     color:#fff;
 
-    margin:0;
-
-    font-size:2.5rem;
-
-    font-weight:700;
+    animation:bounce 2s infinite;
 
 }
 
-.stats p{
+/*=========================================================
+RESPONSIVE
+=========================================================*/
 
-    margin-top:10px;
+@media (max-width:1024px){
 
-    font-size:1rem;
+    .navbar{
 
-    letter-spacing:1px;
+        padding:16px 25px;
 
-    text-transform:uppercase;
+    }
+
+    .nav-links{
+
+        gap:25px;
+
+    }
+
+}
+
+
+/*=========================================================
+TABLETS Y CELULARES
+=========================================================*/
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:18px 20px;
+
+    }
+
+    .logo img{
+
+        width:145px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        z-index:1200;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:280px;
+
+        height:100vh;
+
+        background:#ffffff;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:35px;
+
+        transition:.40s ease;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.12);
+
+        z-index:1100;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .nav-links a{
+
+        color:var(--verde);
+
+        font-size:1.1rem;
+
+    }
+
+    .btn-menu{
+
+        width:80%;
+
+        text-align:center;
+
+    }
+
+    .overlay{
+
+        width:92%;
+
+    }
+
+    .overlay h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .overlay p{
+
+        font-size:1rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+    }
 
 }
 
 
-/*==================================================
-=              BENEFICIOS                           =
-==================================================*/
+/*=========================================================
+CELULARES PEQUEÑOS
+=========================================================*/
 
-.beneficios{
+@media (max-width:480px){
 
-    background:#F8F7F3;
+    .navbar{
+
+        padding:15px;
+
+    }
+
+    .logo img{
+
+        width:130px;
+
+    }
+
+    .overlay h1{
+
+        font-size:2rem;
+
+    }
+
+    .overlay p{
+
+        font-size:.95rem;
+
+    }
+
+    .hero{
+
+        min-height:100svh;
+
+    }
 
 }
 
-.cards{
 
-    display:grid;
+/*=========================================================
+BACKDROP MENU
+=========================================================*/
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+.menu-overlay{
 
-    gap:30px;
+    position:fixed;
 
-}
+    inset:0;
 
-.card{
+    background:rgba(0,0,0,.55);
 
-    background:#fff;
+    opacity:0;
 
-    padding:40px 30px;
-
-    border-radius:var(--radio);
-
-    text-align:center;
-
-    box-shadow:var(--sombra);
+    visibility:hidden;
 
     transition:.35s;
 
-    cursor:pointer;
+    z-index:1090;
 
 }
 
-.card:hover{
+.menu-overlay.active{
 
-    transform:translateY(-12px);
+    opacity:1;
 
-}
-
-.card i{
-
-    font-size:55px;
-
-    color:var(--verde);
-
-    margin-bottom:20px;
-
-}
-
-.card h3{
-
-    color:var(--verde);
-
-    margin-bottom:15px;
-
-    font-size:1.4rem;
-
-}
-
-.card p{
-
-    color:var(--gris);
-
-    line-height:1.8;
+    visibility:visible;
 
 }
 
 
-/*==================================================
-=                 PLANO                             =
-==================================================*/
-
-#plano{
-
-    background:white;
-
-    text-align:center;
-
-}
-
-.plano{
-
-    width:100%;
-
-    max-width:1000px;
-
-    margin:auto;
-
-    border-radius:16px;
-
-    box-shadow:var(--sombra);
-
-    transition:.40s;
-
-}
-
-.plano:hover{
-
-    transform:scale(1.02);
-
-}
-
-
-/*==================================================
-=                 GALERÍA                           =
-==================================================*/
-
-#galeria{
-
-    background:#f3f3f3;
-
-}
-
-.galeria{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:25px;
-
-}
-
-.galeria img{
-
-    width:100%;
-
-    height:260px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    cursor:pointer;
-
-    transition:.40s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-}
-
-.galeria img:hover{
-
-    transform:scale(1.05);
-
-}
-/*==================================================
-=                UBICACIÓN                          =
-==================================================*/
-
-#ubicacion{
-
-    background:#ffffff;
-
-    text-align:center;
-
-}
-
-#ubicacion iframe{
-
-    width:100%;
-
-    max-width:1100px;
-
-    height:500px;
-
-    border:none;
-
-    border-radius:18px;
-
-    box-shadow:var(--sombra);
-
-    margin-bottom:35px;
-
-}
-
-/*==================================================
-=                  FOOTER                           =
-==================================================*/
-
-footer{
-
-    background:var(--verde);
-
-    color:#ffffff;
-
-    text-align:center;
-
-    padding:60px 20px;
-
-}
-
-footer img{
-
-    width:130px;
-
-    margin:0 auto 20px;
-
-}
-
-footer p{
-
-    margin:8px 0;
-
-    opacity:.9;
-
-}
-
-/*==================================================
-=                ANIMACIONES                        =
-==================================================*/
-
-.card,
-.plano,
-.galeria img,
-.btn{
-
-    transition:all .35s ease;
-
-}
-
-@keyframes aparecer{
+/*=========================================================
+ANIMACIÓN HERO
+=========================================================*/
+
+@keyframes fadeUp{
 
     from{
 
         opacity:0;
 
-        transform:translateY(40px);
+        transform:translateY(30px);
 
     }
 
@@ -535,586 +835,53 @@ footer p{
 
 }
 
-.hero .overlay{
+.overlay>*{
 
-    animation:aparecer 1s ease;
-
-}
-
-section{
-
-    animation:aparecer .8s ease;
-
-}
-
-/*==================================================
-=             BOTÓN VOLVER ARRIBA                   =
-==================================================*/
-
-#btnTop{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    background:var(--verde);
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    box-shadow:var(--sombra);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-
-    z-index:999;
-
-}
-
-#btnTop.show{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-#btnTop:hover{
-
-    background:var(--verde-hover);
-
-    transform:translateY(-5px);
-
-}
-
-/*==================================================
-=                 RESPONSIVE                        =
-==================================================*/
-
-@media (max-width:992px){
-
-nav{
-
-    padding:15px 30px;
+    animation:fadeUp .8s ease both;
 
 }
 
 .overlay h1{
 
-    font-size:3.2rem;
-
-}
-
-.stats{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-
-@media (max-width:768px){
-
-
-.logo img{
-
-    height:55px;
-
-}
-
-.hero{
-
-    height:90vh;
-
-}
-
-.overlay h1{
-
-    font-size:2.4rem;
+    animation-delay:.2s;
 
 }
 
 .overlay p{
 
-    font-size:1rem;
+    animation-delay:.4s;
 
 }
 
 .hero-buttons{
 
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.btn{
-
-    width:250px;
-
-    text-align:center;
-
-}
-
-.stats{
-
-    grid-template-columns:1fr;
-
-}
-
-.cards{
-
-    grid-template-columns:1fr;
-
-}
-
-.galeria{
-
-    grid-template-columns:1fr;
-
-}
-
-#ubicacion iframe{
-
-    height:350px;
-
-}
-
-section{
-
-    padding:70px 8%;
-
-}
+    animation-delay:.6s;
 
 }
 
 
-@media (max-width:480px){
+/*=========================================================
+ANIMACIÓN FLECHA
+=========================================================*/
 
-.overlay h1{
+@keyframes bounce{
 
-    font-size:2rem;
+    0%,20%,50%,80%,100%{
 
-}
-
-section h2{
-
-    font-size:1.8rem;
-
-}
-
-nav ul{
-
-    font-size:.9rem;
-
-}
-
-}
-/*==================================================
-=              STYLES.CSS - PARTE 4 DE 4
-==================================================*/
-
-/************* UTILIDADES *************/
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.text-center{
-    text-align:center;
-}
-
-.oculto{
-    display:none;
-}
-
-/************* NAVBAR AL HACER SCROLL *************/
-
-nav.scrolled{
-
-    background:#ffffff;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-
-    padding:12px 70px;
-
-}
-
-nav.scrolled .logo img{
-
-    height:55px;
-
-}
-
-/************* SEPARADORES *************/
-
-section{
-
-    position:relative;
-
-}
-
-section::after{
-
-    content:"";
-
-    display:block;
-
-    width:120px;
-
-    height:4px;
-
-    background:var(--verde-claro);
-
-    margin:60px auto 0;
-
-    border-radius:10px;
-
-}
-
-footer::after{
-
-    display:none;
-
-}
-
-/************* EFECTOS GENERALES *************/
-
-.card{
-
-    overflow:hidden;
-
-}
-
-.card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-100%;
-
-    width:100%;
-
-    height:5px;
-
-    background:var(--verde-claro);
-
-    transition:.4s;
-
-}
-
-.card{
-
-    position:relative;
-
-}
-
-.card:hover::before{
-
-    left:0;
-
-}
-
-/************* IMÁGENES *************/
-
-.galeria img{
-
-    position:relative;
-
-}
-
-.galeria img:hover{
-
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
-
-}
-
-/************* PLANO *************/
-
-.plano{
-
-    cursor:zoom-in;
-
-}
-
-/************* BOTONES *************/
-
-.btn{
-
-    letter-spacing:.5px;
-
-}
-
-.btn:active{
-
-    transform:scale(.98);
-
-}
-
-/************* SCROLL *************/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#efefef;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--verde);
-
-    border-radius:10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--verde-hover);
-
-}
-
-/************* SELECCIÓN *************/
-
-::selection{
-
-    background:var(--verde);
-
-    color:#fff;
-
-}
-
-/************* HOVER SUAVE *************/
-
-img{
-
-    transition:.35s;
-
-}
-
-/************* FOOTER *************/
-
-footer p:last-child{
-
-    margin-top:20px;
-
-    font-size:.9rem;
-
-    opacity:.7;
-
-}
-
-/************* RESPONSIVE EXTRA *************/
-
-@media(max-width:576px){
-
-    nav{
-
-        padding:15px;
+        transform:translateY(0);
 
     }
 
-    nav.scrolled{
+    40%{
 
-        padding:12px;
-
-    }
-
-    .logo img{
-
-        height:48px;
+        transform:translateY(-10px);
 
     }
 
-    .stats h2{
+    60%{
 
-        font-size:2rem;
-
-    }
-
-    .card{
-
-        padding:30px 20px;
-
-    }
-
-    .card i{
-
-        font-size:42px;
-
-    }
-
-    .plano{
-
-        border-radius:10px;
+        transform:translateY(-5px);
 
     }
 
 }
-
-
-/*==============================
-NAVBAR NUEVA
-==============================*/
-
-.navbar{
-
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-
-    background:#fff;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 8%;
-
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-
-    z-index:9999;
-
-}
-
-.logo img{
-
-    height:70px;
-
-}
-
-.menu-toggle{
-
-    display:none;
-
-    font-size:30px;
-
-    cursor:pointer;
-
-    color:#23452c;
-
-}
-
-.nav-links{
-
-    display:flex;
-
-    list-style:none;
-
-    gap:35px;
-
-}
-
-.nav-links a{
-
-    color:#23452c;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover{
-
-    color:#8fb458;
-
-}
-
-header{
-
-    padding-top:100px;
-
-}
-
-@media(max-width:900px){
-
-.menu-toggle{
-
-display:block;
-
-}
-
-.nav-links{
-
-position:fixed;
-
-top:0;
-
-right:-100%;
-
-width:280px;
-
-height:100vh;
-
-background:white;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-gap:35px;
-
-transition:.4s;
-
-box-shadow:-5px 0 25px rgba(0,0,0,.15);
-
-}
-
-.nav-links.active{
-
-right:0;
-
-}
-
-.logo img{
-
-height:58px;
-
-}
-
-}
-/*=============================
-    FIN DEL ARCHIVO
-=============================*/
