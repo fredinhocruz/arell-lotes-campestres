@@ -72,35 +72,6 @@ a{
       NAVBAR
 =============================*/
 
-nav{
-
-    position:fixed;
-
-    width:100%;
-
-    top:0;
-
-    left:0;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:18px 70px;
-
-    background:rgba(255,255,255,.95);
-
-    backdrop-filter:blur(8px);
-
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-
-    z-index:999;
-
-    transition:.35s;
-
-}
 
 .logo img{
 
@@ -108,31 +79,7 @@ nav{
 
 }
 
-nav ul{
 
-    display:flex;
-
-    list-style:none;
-
-    gap:40px;
-
-}
-
-nav ul li a{
-
-    color:var(--verde);
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-nav ul li a:hover{
-
-    color:var(--verde-claro);
-
-}
 
 /*============================
       HERO
@@ -689,25 +636,6 @@ nav{
 
 @media (max-width:768px){
 
-nav{
-
-    flex-direction:column;
-
-    gap:15px;
-
-    padding:20px;
-
-}
-
-nav ul{
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-}
 
 .logo img{
 
