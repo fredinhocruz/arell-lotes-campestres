@@ -1,9 +1,11 @@
-/*=========================================================
+
   ARELL LOTES CAMPESTRES
   MAIN.CSS V2.0
 =========================================================*/
 
-
+html {
+    scroll-behavior: smooth;
+}
 /*=========================================================
   VARIABLES
 =========================================================*/
@@ -395,6 +397,74 @@ BOTON MENU
 
 }
 
+/*=========================================================
+MENU
+=========================================================*/
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#ffffff;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+    position:relative;
+
+}
+
+header.scrolled .nav-links a{
+
+    color:var(--verde);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--dorado);
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*=========================================================
+BOTÓN MENÚ
+=========================================================*/
+
+.btn-menu{
+
+    background:var(--dorado);
+    color:#fff !important;
+    padding:12px 22px;
+    border-radius:50px;
+
+}
+
+.btn-menu:hover{
+
+    transform:translateY(-2px);
+
+}
+
 
 /*=========================================================
 HAMBURGUESA
@@ -403,16 +473,12 @@ HAMBURGUESA
 .menu-toggle{
 
     display:none;
-
     font-size:30px;
-
     color:#fff;
-
     cursor:pointer;
-
     background:none;
-
     border:none;
+    z-index:1200;
 
 }
 

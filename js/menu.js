@@ -1,6 +1,5 @@
 /*=========================================================
-  MENU.JS
-  ARELL LOTES CAMPESTRES V2
+MENU.JS
 =========================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,83 +10,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!menuToggle || !navLinks) return;
 
-    // Abrir / cerrar menú
-    menuToggle.addEventListener("click", () => {
+    function openMenu() {
 
-        navLinks.classList.toggle("active");
+        navLinks.classList.add("active");
 
-        if(menuOverlay){
-            menuOverlay.classList.toggle("active");
+        if (menuOverlay) {
+            menuOverlay.classList.add("active");
         }
 
-        // Cambia el icono
-        const icon = menuToggle.querySelector("i");
-
-        if(icon){
-
-            if(navLinks.classList.contains("active")){
-
-                icon.classList.remove("fa-bars");
-                icon.classList.add("fa-xmark");
-
-            }else{
-
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-
-            }
-
-        }
-
-    });
-
-    // Cerrar al tocar el fondo oscuro
-
-    if(menuOverlay){
-
-        menuOverlay.addEventListener("click", closeMenu);
+        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
 
     }
 
-    // Cerrar al pulsar un enlace
-
-    document.querySelectorAll(".nav-links a").forEach(link=>{
-
-        link.addEventListener("click", closeMenu);
-
-    });
-
-    // Cerrar al cambiar tamaño de pantalla
-
-    window.addEventListener("resize",()=>{
-
-        if(window.innerWidth>768){
-
-            closeMenu();
-
-        }
-
-    });
-
-    function closeMenu(){
+    function closeMenu() {
 
         navLinks.classList.remove("active");
 
-        if(menuOverlay){
-
+        if (menuOverlay) {
             menuOverlay.classList.remove("active");
-
         }
 
-        const icon = menuToggle.querySelector("i");
-
-        if(icon){
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 
     }
+
+    menuToggle.addEventListener("click", () => {
+
+        if (navLinks.classList.contains("active")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+
+    });
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener("click", closeMenu);
+    }
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            closeMenu();
+
+        });
+
+    });
 
 });
