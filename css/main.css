@@ -1055,6 +1055,138 @@ footer p:last-child{
 
 }
 
+
+/*==============================
+NAVBAR NUEVA
+==============================*/
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 8%;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+    z-index:9999;
+
+}
+
+.logo img{
+
+    height:70px;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#23452c;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:#23452c;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#8fb458;
+
+}
+
+header{
+
+    padding-top:100px;
+
+}
+
+@media(max-width:900px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.nav-links{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:280px;
+
+height:100vh;
+
+background:white;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:35px;
+
+transition:.4s;
+
+box-shadow:-5px 0 25px rgba(0,0,0,.15);
+
+}
+
+.nav-links.active{
+
+right:0;
+
+}
+
+.logo img{
+
+height:58px;
+
+}
+
+}
 /*=============================
     FIN DEL ARCHIVO
 =============================*/
