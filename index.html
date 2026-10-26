@@ -32,36 +32,57 @@
     <!-- CSS -->
 
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/header.css">
 
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/beneficios.css">
+<link rel="stylesheet" href="css/plano.css">
+<link rel="stylesheet" href="css/galeria.css">
+<link rel="stylesheet" href="css/ubicacion.css">
+<link rel="stylesheet" href="css/contacto.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
 </head>
 
 <body>
 
-    <div class="menu-overlay" id="menu-overlay"></div>
+<!--=========================================================
+HEADER V5
+==========================================================-->
 
-<header>
+<header id="header">
 
-    <nav class="navbar">
+    <nav class="navbar container">
 
+        <!-- LOGO -->
         <a href="#inicio" class="logo">
 
-            <img src="img/logo/arell-logo.jpg"
-                 alt="ARELL Lotes Campestres">
+            <img
+                src="img/logo/arell-logo.jpg"
+                alt="ARELL Lotes Campestres">
 
         </a>
 
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Abrir menú">
+        <!-- BOTÓN MENÚ -->
+        <button
+            id="menu-toggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-links">
 
             <i class="fas fa-bars"></i>
 
         </button>
 
-        <ul class="nav-links" id="nav-links">
+        <!-- NAVEGACIÓN -->
+        <ul
+            id="nav-links"
+            class="nav-links">
 
             <li><a href="#inicio">Inicio</a></li>
 
@@ -74,13 +95,17 @@
             <li><a href="#ubicacion">Ubicación</a></li>
 
             <li>
-                <a class="btn-menu"
-                   href="https://wa.me/529991234567"
-                   target="_blank">
+
+                <a
+                    href="https://wa.me/529991234567"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-menu">
 
                     WhatsApp
 
                 </a>
+
             </li>
 
         </ul>
@@ -89,6 +114,14 @@
 
 </header>
 
+<!-- Overlay -->
+<div
+    id="menu-overlay"
+    class="menu-overlay"></div>
+<!-- Overlay del menú móvil -->
+<div
+    id="menu-overlay"
+    class="menu-overlay"></div>
 <!-- HERO -->
 
 <section class="hero" id="inicio">
@@ -440,21 +473,7 @@
                      loading="lazy"
                      decoding="async">
             </div>
-
-            <div class="gallery-item">
-                <img src="img/galeria/galeria5.jpg"
-                     alt="Vista aérea"
-                     loading="lazy"
-                     decoding="async">
-            </div>
-
-            <div class="gallery-item">
-                <img src="img/galeria/galeria6.jpg"
-                     alt="Área del desarrollo"
-                     loading="lazy"
-                     decoding="async">
-            </div>
-
+       
         </div>
 
         <div class="gallery-action">
@@ -587,7 +606,7 @@
      BOTÓN WHATSAPP
 ====================================================== -->
 
-<a href="https://wa.me/529991234567"
+<a href="https://wa.me/529991393426"
    class="whatsapp-float"
    target="_blank"
    aria-label="WhatsApp">
@@ -604,6 +623,7 @@
 
     <div class="container footer-grid">
 
+         <!--
         <div>
 
             <img
@@ -620,6 +640,7 @@
 
         </div>
 
+       
         <div>
 
             <h4>Menú</h4>
@@ -639,6 +660,7 @@
             </ul>
 
         </div>
+        -->
 
         <div>
 
@@ -681,7 +703,7 @@
 ====================================================== -->
 
 <script src="js/menu.js"></script>
-<script src="js/scroll.js"></script>
+<!-- <script src="js/scroll.js"></script> -->
 
 
 

@@ -1,6 +1,6 @@
 
   ARELL LOTES CAMPESTRES
-  MAIN.CSS V2.0
+  MAIN.CSS V2.0 
 =========================================================*/
 
 html {
@@ -248,15 +248,26 @@ p{
   NAVBAR
 =========================================================*/
 
-header{
+/*=========================================================
+HEADER V3
+=========================================================*/
+
+/*=========================================================
+HEADER V5
+=========================================================*/
+
+#header{
 
     position:fixed;
 
     top:0;
-
     left:0;
 
     width:100%;
+
+    background:#ffffff;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
 
     z-index:1000;
 
@@ -264,61 +275,31 @@ header{
 
 .navbar{
 
-    width:100%;
-
-    max-width:1400px;
-
-    margin:auto;
+    height:80px;
 
     display:flex;
 
+    align-items:center;
+
     justify-content:space-between;
+
+}
+
+.logo{
+
+    display:flex;
 
     align-items:center;
 
-    padding:18px 40px;
-
-    transition:all .35s ease;
-
 }
-
-header.scrolled{
-
-    background:#ffffff;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-}
-
-header.scrolled .navbar{
-
-    padding:12px 40px;
-
-}
-
-
-/*=========================================================
-LOGO
-=========================================================*/
 
 .logo img{
 
     width:170px;
 
-    transition:.35s;
+    display:block;
 
 }
-
-header.scrolled .logo img{
-
-    width:150px;
-
-}
-
-
-/*=========================================================
-MENU
-=========================================================*/
 
 .nav-links{
 
@@ -326,97 +307,140 @@ MENU
 
     align-items:center;
 
-    gap:40px;
+    gap:35px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
 
 }
 
 .nav-links a{
 
-    color:#ffffff;
+    position:relative;
+
+    color:#1E3A2F;
 
     font-weight:600;
 
-    transition:.3s;
+    text-decoration:none;
 
-    position:relative;
+    transition:color .30s;
 
 }
 
-header.scrolled .nav-links a{
+.nav-links a:hover{
+
+    color:var(--dorado);
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:1.8rem;
 
     color:var(--verde);
 
 }
 
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--dorado);
-
-    transition:.35s;
-
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
-
-}
-
-
-/*=========================================================
-BOTON MENU
-=========================================================*/
-
 .btn-menu{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 22px;
+
+    border-radius:30px;
 
     background:var(--dorado);
 
     color:#fff !important;
 
-    padding:12px 22px;
+    text-decoration:none;
 
-    border-radius:50px;
+    font-weight:700;
 
 }
 
 .btn-menu:hover{
 
-    transform:translateY(-2px);
+    opacity:.9;
 
 }
+.navbar{
+    width:min(1400px,92%);
+    margin:auto;
 
-/*=========================================================
-MENU
-=========================================================*/
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 0;
+
+    transition:.35s ease;
+}
+
+header.scrolled .navbar{
+    padding:12px 0;
+}
+
+
+/*==============================
+LOGO
+==============================*/
+
+.logo img{
+    width:170px;
+    transition:.35s ease;
+}
+
+header.scrolled .logo img{
+    width:150px;
+}
+
+
+/*==============================
+MENU ESCRITORIO
+==============================*/
 
 .nav-links{
 
     display:flex;
+
     align-items:center;
+
     gap:40px;
+
+}
+
+.nav-links li{
+
     list-style:none;
 
 }
 
 .nav-links a{
 
-    color:#ffffff;
-    font-weight:600;
-    text-decoration:none;
-    transition:.3s;
     position:relative;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.30s;
 
 }
 
@@ -429,12 +453,19 @@ header.scrolled .nav-links a{
 .nav-links a::after{
 
     content:"";
+
     position:absolute;
+
     left:0;
+
     bottom:-8px;
+
     width:0;
+
     height:2px;
+
     background:var(--dorado);
+
     transition:.35s;
 
 }
@@ -446,16 +477,27 @@ header.scrolled .nav-links a{
 }
 
 
-/*=========================================================
-BOTÓN MENÚ
-=========================================================*/
+/*==============================
+BOTÓN WHATSAPP
+==============================*/
 
 .btn-menu{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
     background:var(--dorado);
+
     color:#fff !important;
-    padding:12px 22px;
-    border-radius:50px;
+
+    transition:.30s;
 
 }
 
@@ -466,19 +508,23 @@ BOTÓN MENÚ
 }
 
 
-/*=========================================================
-HAMBURGUESA
-=========================================================*/
+/*==============================
+BOTÓN HAMBURGUESA
+==============================*/
 
 .menu-toggle{
 
     display:none;
-    font-size:30px;
-    color:#fff;
-    cursor:pointer;
-    background:none;
+
     border:none;
-    z-index:1200;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:1.8rem;
+
+    color:#ffffff;
 
 }
 
@@ -488,6 +534,36 @@ header.scrolled .menu-toggle{
 
 }
 
+
+/*==============================
+OVERLAY
+==============================*/
+
+.menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:990;
+
+}
+
+.menu-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
 
 /*=========================================================
 HERO
@@ -693,118 +769,6 @@ RESPONSIVE
 /*=========================================================
 TABLETS Y CELULARES
 =========================================================*/
-
-@media (max-width:768px){
-
-    .navbar{
-
-        padding:18px 20px;
-
-    }
-
-    .logo img{
-
-        width:145px;
-
-    }
-
-    .menu-toggle{
-
-        display:block;
-
-        z-index:1200;
-
-    }
-
-    .nav-links{
-
-        position:fixed;
-
-        top:0;
-
-        right:-100%;
-
-        width:280px;
-
-        height:100vh;
-
-        background:#ffffff;
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        align-items:center;
-
-        gap:35px;
-
-        transition:.40s ease;
-
-        box-shadow:-10px 0 30px rgba(0,0,0,.12);
-
-        z-index:1100;
-
-    }
-
-    .nav-links.active{
-
-        right:0;
-
-    }
-
-    .nav-links a{
-
-        color:var(--verde);
-
-        font-size:1.1rem;
-
-    }
-
-    .btn-menu{
-
-        width:80%;
-
-        text-align:center;
-
-    }
-
-    .overlay{
-
-        width:92%;
-
-    }
-
-    .overlay h1{
-
-        font-size:2.5rem;
-
-    }
-
-    .overlay p{
-
-        font-size:1rem;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .btn{
-
-        width:100%;
-
-        max-width:320px;
-
-        text-align:center;
-
-    }
-
-}
 
 
 /*=========================================================

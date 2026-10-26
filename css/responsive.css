@@ -1,6 +1,6 @@
 /*=========================================================
 RESPONSIVE.CSS
-ARELL V2
+ARELL V3
 =========================================================*/
 
 
@@ -11,160 +11,159 @@ TABLETS
 @media (max-width:992px){
 
     .container{
-
         width:94%;
-
     }
 
     section{
-
         padding:80px 0;
-
     }
 
 }
 
 
 /*==============================
-TABLETS PEQUEÑAS
+MÓVILES
 ==============================*/
 
 @media (max-width:768px){
-	
-/*==============================
-MENÚ MÓVIL
-==============================*/
 
-/*==============================
-MENÚ MÓVIL
-==============================*/
+    /*==============================
+    HEADER
+    ==============================*/
 
-.menu-toggle{
+    .navbar{
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:1200;
-
-}
-
-.nav-links{
-
-    position:fixed;
-
-    top:0;
-    right:-100%;
-
-    width:280px;
-    height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:35px;
-
-    list-style:none;
-
-    background:#ffffff;
-
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
-
-    transition:right .35s ease;
-
-    z-index:1100;
-
-}
-
-.nav-links.active{
-
-    right:0;
-
-}
-
-.nav-links a{
-
-    color:var(--verde);
-
-    font-size:1.1rem;
-
-    text-decoration:none;
-
-}
-
-.menu-overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.55);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.35s;
-
-    z-index:1090;
-
-}
-
-.menu-overlay.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-    .cards{
-
-        display:grid;
-
-        grid-template-columns:1fr;
-        gap:25px;
+        padding:18px 20px;
 
     }
 
-    .plano-grid{
+    .logo img{
 
-        display:grid;
-
-        grid-template-columns:1fr;
-
-        gap:40px;
+        width:145px;
 
     }
 
-    .gallery-grid{
+    .menu-toggle{
 
-        display:grid;
+        display:flex;
 
-        grid-template-columns:repeat(2,1fr);
+        align-items:center;
 
-        gap:15px;
+        justify-content:center;
+
+        width:48px;
+
+        height:48px;
+
+        border:none;
+
+        background:none;
+
+        color:#ffffff;
+
+        font-size:30px;
+
+        cursor:pointer;
+
+        z-index:1200;
 
     }
 
-    .ubicacion-grid{
+    header.scrolled .menu-toggle{
 
-        display:grid;
-
-        grid-template-columns:1fr;
-
-        gap:40px;
+        color:var(--verde);
 
     }
 
-    .footer-grid{
+    /*=========================================================
+HEADER RESPONSIVE V5
+=========================================================*/
 
-        display:grid;
+@media (max-width:768px){
 
-        grid-template-columns:1fr;
+    .navbar{
 
-        gap:35px;
+        height:75px;
+
+    }
+
+    .logo img{
+
+        width:145px;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:46px;
+
+        height:46px;
+
+        font-size:1.6rem;
+
+        z-index:1200;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:280px;
+
+        height:100vh;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:30px;
+
+        margin:0;
+
+        padding:0;
+
+        list-style:none;
+
+        background:#ffffff;
+
+        transition:right .35s ease;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+        z-index:1100;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .nav-links a{
+
+        font-size:1.1rem;
+
+    }
+
+    .btn-menu{
+
+        width:80%;
 
         text-align:center;
 
@@ -172,40 +171,74 @@ MENÚ MÓVIL
 
 }
 
+    /*==============================
+    HERO
+    ==============================*/
 
-/*==============================
-CELULARES
-==============================*/
+    .overlay{
 
-@media (max-width:576px){
-
-    h1{
-
-        font-size:2.2rem;
+        width:92%;
 
     }
 
-    h2{
+    .overlay h1{
 
-        font-size:1.8rem;
+        font-size:2.5rem;
 
     }
 
-    .gallery-grid{
+    .overlay p{
 
-        grid-template-columns:1fr;
+        font-size:1rem;
 
     }
 
     .hero-buttons{
 
-        width:100%;
+        flex-direction:column;
+
+        align-items:center;
 
     }
 
     .btn{
 
         width:100%;
+
+        max-width:320px;
+
+    }
+
+}
+
+
+/*==============================
+CELULARES PEQUEÑOS
+==============================*/
+
+@media (max-width:480px){
+
+    .navbar{
+
+        padding:15px;
+
+    }
+
+    .logo img{
+
+        width:125px;
+
+    }
+
+    .overlay h1{
+
+        font-size:2rem;
+
+    }
+
+    .overlay p{
+
+        font-size:.95rem;
 
     }
 

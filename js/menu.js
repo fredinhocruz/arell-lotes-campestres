@@ -1,58 +1,36 @@
-/*=========================================================
-MENU.JS
-=========================================================*/
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-    const menuOverlay = document.getElementById("menu-overlay");
+    const btn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-links");
+    const overlay = document.getElementById("menu-overlay");
 
-    if (!menuToggle || !navLinks) return;
+    if (!btn || !menu || !overlay) return;
 
-    function openMenu() {
-
-        navLinks.classList.add("active");
-
-        if (menuOverlay) {
-            menuOverlay.classList.add("active");
-        }
-
-        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
-
+    function abrir() {
+        menu.classList.add("active");
+        overlay.classList.add("active");
+        btn.innerHTML = '<i class="fas fa-times"></i>';
+        btn.setAttribute("aria-expanded", "true");
     }
 
-    function closeMenu() {
-
-        navLinks.classList.remove("active");
-
-        if (menuOverlay) {
-            menuOverlay.classList.remove("active");
-        }
-
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-
+    function cerrar() {
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        btn.innerHTML = '<i class="fas fa-bars"></i>';
+        btn.setAttribute("aria-expanded", "false");
     }
 
-    menuToggle.addEventListener("click", () => {
-
-        if (navLinks.classList.contains("active")) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-
+    btn.addEventListener("click", () => {
+        menu.classList.contains("active") ? cerrar() : abrir();
     });
 
-    if (menuOverlay) {
-        menuOverlay.addEventListener("click", closeMenu);
-    }
+    overlay.addEventListener("click", cerrar);
 
-    navLinks.querySelectorAll("a").forEach(link => {
+    menu.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", () => {
 
-            closeMenu();
+            cerrar();
 
         });
 
