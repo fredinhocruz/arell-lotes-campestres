@@ -1,0 +1,157 @@
+/*=========================================================
+HERO
+=========================================================*/
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--blanco);
+    background-color: var(--verde);
+    background-image: url("../img/hero/hero.jpg");
+    background-position: center 54%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    content: "";
+    background:
+        linear-gradient(90deg, rgba(21, 39, 27, .84) 0%, rgba(21, 39, 27, .63) 46%, rgba(21, 39, 27, .12) 100%),
+        linear-gradient(0deg, rgba(21, 39, 27, .28), transparent 42%);
+    pointer-events: none;
+}
+
+.hero .overlay {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: min(var(--container), calc(100% - 3rem));
+    min-height: 100vh;
+    min-height: 100svh;
+    margin-inline: auto;
+    padding: clamp(8rem, 16vh, 11rem) 0 clamp(6rem, 12vh, 8rem);
+}
+
+.hero .badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    padding: .65rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .38);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .12);
+    color: var(--blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1.4;
+    backdrop-filter: blur(12px);
+}
+
+.hero .overlay h1 {
+    max-width: 12ch;
+    margin: 0 0 1.25rem;
+    color: var(--blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: clamp(3rem, 6.2vw, 5.75rem);
+    font-weight: 750;
+    letter-spacing: -.045em;
+    line-height: 1.02;
+    text-wrap: balance;
+}
+
+.hero .overlay p {
+    width: min(100%, 42rem);
+    margin: 0 0 2rem;
+    color: rgba(255, 255, 255, .9);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.65;
+}
+
+.hero .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .875rem;
+}
+
+.hero .btn,
+.hero .btn-light {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    padding: .9rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: var(--dorado);
+    color: var(--blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    transform: translateY(-2px);
+    background: var(--verde-secundario);
+}
+
+.hero .btn-light {
+    border-color: rgba(255, 255, 255, .58);
+    background: rgba(255, 255, 255, .1);
+    color: var(--blanco);
+    backdrop-filter: blur(10px);
+}
+
+.hero .btn-light:hover {
+    background: rgba(255, 255, 255, .22);
+}
+
+.hero .btn:focus-visible,
+.hero .hero-scroll a:focus-visible {
+    outline: 3px solid var(--blanco);
+    outline-offset: 4px;
+}
+
+.hero .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero .hero-scroll a {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 50%;
+    color: var(--blanco);
+    font-size: 1rem;
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+}
+
+.hero .hero-scroll a:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, .16);
+}
