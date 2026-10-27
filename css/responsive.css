@@ -402,3 +402,57 @@ CELULARES PEQUEÑOS
     }
 
 }
+
+
+/*==============================
+GALERÍA
+==============================*/
+
+@media (max-width:992px) {
+    .galeria {
+        padding: 84px 0;
+    }
+
+    .galeria .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .galeria {
+        padding: 72px 0;
+    }
+
+    .galeria .container {
+        width: min(100% - 40px, var(--container));
+    }
+
+    .galeria .section-description {
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width:560px) {
+    .galeria {
+        padding: 60px 0;
+    }
+
+    .galeria .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .galeria h2 {
+        font-size: 2rem;
+    }
+
+    .galeria .section-description {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .galeria .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
