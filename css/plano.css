@@ -1,0 +1,164 @@
+/*=========================================================
+PLANO GENERAL
+Proyecto: ARELL Lotes Campestres
+=========================================================*/
+
+.plano {
+    padding: 104px 0;
+    background-color: var(--gris);
+}
+
+.plano .container {
+    width: min(100% - 48px, var(--container));
+    margin-inline: auto;
+    text-align: center;
+}
+
+.plano .section-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--dorado);
+    color: var(--verde);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.plano h2 {
+    max-width: 760px;
+    margin: 0 auto 20px;
+    color: var(--verde);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.plano .section-description {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    color: var(--gris-texto);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+}
+
+.plano-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 36px;
+}
+
+.plano-imagen {
+    width: 100%;
+    max-width: 1080px;
+    overflow: hidden;
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radius-lg);
+    background-color: var(--blanco);
+    box-shadow: var(--shadow-md);
+}
+
+.plano-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.plano-info {
+    display: grid;
+    width: 100%;
+    max-width: 920px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.plano .info-card {
+    padding: 28px 26px;
+    border: 1px solid var(--gris-claro);
+    border-radius: var(--radius-md);
+    background-color: var(--blanco);
+    text-align: left;
+}
+
+.plano .info-card > i {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: var(--radius-sm);
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-size: 1.125rem;
+}
+
+.plano .info-card h3 {
+    margin: 0 0 10px;
+    color: var(--verde);
+    font-size: 1.2rem;
+    line-height: 1.35;
+}
+
+.plano .info-card p {
+    margin: 0;
+    color: var(--gris-texto);
+    font-size: 0.975rem;
+    line-height: 1.7;
+}
+
+.plano-botones {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 14px;
+}
+
+.plano .btn,
+.plano .btn-whatsapp {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border: 1px solid var(--verde);
+    border-radius: var(--radius-sm);
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-size: 0.975rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.plano .btn:hover,
+.plano .btn-whatsapp:hover {
+    border-color: var(--verde-secundario);
+    background-color: var(--verde-secundario);
+}
+
+.plano .btn:focus-visible,
+.plano .btn-whatsapp:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+.plano .btn-light {
+    border-color: var(--dorado);
+    background-color: var(--blanco);
+    color: var(--verde);
+}
+
+.plano .btn-light:hover {
+    background-color: var(--gris);
+    color: var(--verde);
+}
+
+.plano .btn-whatsapp {
+    grid-column: 1 / -1;
+    justify-self: center;
+}

@@ -22,6 +22,156 @@ TABLETS
 
 
 /*==============================
+PLANO GENERAL
+==============================*/
+
+@media (max-width:992px) {
+    .plano {
+        padding: 88px 0;
+    }
+
+    .plano-grid {
+        gap: 30px;
+    }
+
+    .plano-info {
+        gap: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .plano {
+        padding: 76px 0;
+    }
+
+    .plano .container {
+        width: min(100% - 40px, var(--container));
+    }
+
+    .plano .section-description {
+        margin-bottom: 36px;
+    }
+
+    .plano-grid {
+        gap: 24px;
+    }
+
+    .plano-imagen {
+        border-radius: var(--radius-md);
+    }
+
+    .plano-info {
+        gap: 16px;
+    }
+
+    .plano .info-card {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width:560px) {
+    .plano {
+        padding: 64px 0;
+    }
+
+    .plano .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .plano .section-description {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .plano-grid {
+        gap: 20px;
+    }
+
+    .plano-info {
+        grid-template-columns: 1fr;
+    }
+
+    .plano-botones {
+        width: 100%;
+        flex-direction: column;
+        grid-column: auto;
+        gap: 12px;
+    }
+
+    .plano .btn,
+    .plano .btn-whatsapp {
+        width: 100%;
+    }
+
+    .plano .btn-whatsapp {
+        grid-column: auto;
+    }
+}
+
+
+/*==============================
+BENEFICIOS
+==============================*/
+
+@media (max-width:992px) {
+    .beneficios .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .beneficios .section-description {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width:768px) {
+    .beneficios {
+        padding: 76px 0;
+    }
+
+    .beneficios .container {
+        width: min(100% - 40px, var(--container));
+    }
+
+    .beneficios .section-description {
+        margin-bottom: 36px;
+    }
+
+    .beneficios .card {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width:560px) {
+    .beneficios {
+        padding: 64px 0;
+    }
+
+    .beneficios .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .beneficios h2 {
+        font-size: 2rem;
+    }
+
+    .beneficios .section-description {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .beneficios .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .beneficios .card {
+        padding: 26px 24px;
+    }
+}
+
+
+/*==============================
 MÓVILES
 ==============================*/
 
@@ -169,38 +319,37 @@ HEADER RESPONSIVE V5
     HERO
     ==============================*/
 
-    .overlay{
-
-        width:92%;
-
+    .hero .overlay{
+        width:calc(100% - 2.5rem);
+        padding-top:calc(var(--header-height, 90px) + 3.5rem);
+        padding-bottom:6rem;
     }
 
-    .overlay h1{
-
-        font-size:2.5rem;
-
+    .hero .overlay h1{
+        max-width:11ch;
+        font-size:clamp(2.75rem, 10vw, 4.25rem);
     }
 
-    .overlay p{
-
+    .hero .overlay p{
+        max-width:36rem;
         font-size:1rem;
-
     }
 
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .btn{
-
+    .hero .hero-buttons{
         width:100%;
+        max-width:21rem;
+        flex-direction:column;
+        align-items:stretch;
+    }
 
-        max-width:320px;
+    .hero .btn,
+    .hero .btn-light{
+        width:100%;
+        max-width:none;
+    }
 
+    .hero .hero-scroll{
+        bottom:1.25rem;
     }
 
 }
@@ -224,16 +373,32 @@ CELULARES PEQUEÑOS
 
     }
 
-    .overlay h1{
-
-        font-size:2rem;
-
+    .hero .overlay{
+        width:calc(100% - 2rem);
+        padding-top:calc(var(--header-height, 90px) + 2.5rem);
+        padding-bottom:5rem;
     }
 
-    .overlay p{
+    .hero .badge{
+        margin-bottom:1.25rem;
+        font-size:.78rem;
+    }
 
-        font-size:.95rem;
+    .hero .overlay h1{
+        font-size:clamp(2.35rem, 12vw, 3.5rem);
+        letter-spacing:-.035em;
+    }
 
+    .hero .overlay p{
+        font-size:.98rem;
+    }
+
+    .hero .hero-buttons{
+        max-width:none;
+    }
+
+    .hero .hero-scroll{
+        bottom:.75rem;
     }
 
 }
