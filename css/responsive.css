@@ -94,17 +94,16 @@ PLANO GENERAL
     .plano-botones {
         width: 100%;
         flex-direction: column;
+        align-items: center;
         grid-column: auto;
         gap: 12px;
     }
 
-    .plano .btn,
-    .plano .btn-whatsapp {
-        width: 100%;
-    }
-
-    .plano .btn-whatsapp {
-        grid-column: auto;
+    .plano-botones .btn {
+        box-sizing: border-box;
+        width: 72%;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
