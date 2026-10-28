@@ -2,6 +2,10 @@
 HEADER
 =========================================================*/
 
+section[id] {
+    scroll-margin-top: var(--header-height);
+}
+
 #header{
     position:fixed;
     top:0;
