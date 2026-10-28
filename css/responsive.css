@@ -305,6 +305,12 @@ HEADER RESPONSIVE V5
 
     }
 
+    .nav-links a:not(.btn-menu){
+
+        color:var(--verde);
+
+    }
+
     .btn-menu{
 
         width:80%;
