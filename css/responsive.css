@@ -327,7 +327,7 @@ HEADER RESPONSIVE V5
 
     .hero .overlay{
         width:calc(100% - 2.5rem);
-        padding-top:calc(var(--header-height, 90px) + 3.5rem);
+        padding-top:calc(var(--header-height, 90px) + 2rem);
         padding-bottom:6rem;
     }
 
@@ -381,7 +381,7 @@ CELULARES PEQUEÑOS
 
     .hero .overlay{
         width:calc(100% - 2rem);
-        padding-top:calc(var(--header-height, 90px) + 2.5rem);
+        padding-top:calc(var(--header-height, 90px) + 1.25rem);
         padding-bottom:5rem;
     }
 
@@ -460,6 +460,29 @@ GALERÍA
     .galeria .gallery-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+}
+
+
+/*==============================
+AJUSTES DE CONTROLES MÓVILES
+==============================*/
+
+@media (max-width:768px) {
+    .menu-toggle {
+        border: 1px solid rgba(255, 255, 255, .42);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .14);
+        backdrop-filter: blur(8px);
+    }
+
+    header.scrolled .menu-toggle {
+        border-color: rgba(35, 69, 43, .18);
+        background: rgba(35, 69, 43, .08);
+    }
+
+    .whatsapp-float {
+        bottom: calc(40px + env(safe-area-inset-bottom, 0px));
     }
 }
 
