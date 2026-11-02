@@ -6,6 +6,10 @@ section[id] {
     scroll-margin-top: var(--header-height);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #header{
     position:fixed;
     top:0;

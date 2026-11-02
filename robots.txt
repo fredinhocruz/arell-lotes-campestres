@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fredinhocruz.github.io/arell-lotes-campestres/sitemap.xml
